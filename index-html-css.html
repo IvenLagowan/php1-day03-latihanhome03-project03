@@ -1,0 +1,42 @@
+<?php
+    session_start();
+    if (isset($_SESSION['salah'])){
+        echo '<script>alert("Username atau Password yang di masukan salah")</script>';
+    }
+    // destroy the session
+    session_destroy();
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css/asset/login/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-container">
+            <div class="user-icon">
+                <img src="asset/login.css/chua.JPG" id="icpn" alt="User Icon" width="100" height="100"/>
+            </div>
+            <div class="login-form">
+                <form action="login" method="post" action="index-html-css.php">
+                    <div>
+                        <input type="text" name="nim" placeholder="NIM" require>
+
+                    </div>
+                    <input type="password" name="password" placeholder="Password" require>
+            </div>
+            <div>
+                <input type="submit" name="submit" value="LOGIN">
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
